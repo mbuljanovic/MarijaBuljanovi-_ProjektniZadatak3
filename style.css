@@ -1,0 +1,108 @@
+/* Učitavanje vlastitog fonta samo za naslov na početnoj stranici */
+@font-face {
+  font-family: 'MarijaBuljanovic';
+  src: url('fontovi/MarijaBuljanovic.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url("slikeMB/pozadina3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+/* Naslov samo na početnoj stranici koristi posebni font */
+.naslov-pocetna {
+  font-family: 'MarijaBuljanovic', sans-serif;
+  font-size: 70px;
+  margin: 40px 0 10px;
+  color: white;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0 0 30px;
+}
+
+nav {
+  background: url("slikeMB/sir.jpg") no-repeat center center/cover;
+  opacity: 0.5;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.uvodni-tekst {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+/* Poluprozirni okvir za slike i video na stranici vjezbe */
+.okvir-vjezbe {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.okvir-vjezbe img,
+.okvir-vjezbe video,
+.slike-centar img,
+.slike-centar video {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+}
+
+.slike-centar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dodatno smanjenje slike "8" na početnoj stranici ako je potrebno */
+img[src*="8.jpg"] {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+}
